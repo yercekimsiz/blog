@@ -9,14 +9,7 @@
     <%= javascript_importmap_tags %>
   </head>
   <body>
-    <nav>
-      <%= link_to "Homepage", root_path %>
-      <% if admin_signed_in? %>
-        <li><%= button_to "Logout", destroy_admin_session_path, method: :delete %></li>
-      <% else %>
-        <li><%= link_to "Login", new_admin_session_path %></li>
-      <% end %>
-    </nav>
+    <%= render 'partials/navbar' %>
     <div>
       <p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p>
