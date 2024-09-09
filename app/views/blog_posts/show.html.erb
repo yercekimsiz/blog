@@ -1,5 +1,5 @@
 <div>
   <h2><%= @blog_post.title %></h2>
   <p><%= @blog_post.body %></p>
-  <%= link_to "Edit", edit_blog_post_path %>
+  <%= link_to "Edit", edit_blog_post_path if admin_signed_in? %>
 </div>
